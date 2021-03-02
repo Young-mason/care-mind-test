@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FontSizer from "../componenets/FontSizer";
+import Greeter from "../componenets/Greeter";
 
 function Main({ showNav }) {
   const [fontSize, setFontSize] = useState(16);
@@ -12,12 +13,9 @@ function Main({ showNav }) {
       }}
     >
       <FontSizer fontSize={fontSize} setFontSize={setFontSize}></FontSizer>
-      <h1>For TEST</h1>
-      <p>
-        This example demonstrates how a navigation menu on a mobile/smart phone
-        could look like. Click on the hamburger menu (three bars) in the top
-        right corner, to toggle the menu.
-      </p>
+
+      <Greeter user="Master"></Greeter>
+      <p>1-1, 1-2, 2-1 문항을 이 페이지에 구현하였습니다</p>
     </main>
   );
 }

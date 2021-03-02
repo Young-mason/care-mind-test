@@ -15,11 +15,7 @@ function FontSizer({ fontSize, setFontSize }) {
       <button className="font-sizer-btn" id="plus" onClick={fontSizeHandler}>
         <i className="fas fa-plus" id="plus"></i>
       </button>
-      <button
-        className="font-sizer-btn minus"
-        id="minus"
-        onClick={fontSizeHandler}
-      >
+      <button className="font-sizer-btn" id="minus" onClick={fontSizeHandler}>
         <i className="fas fa-minus" id="minus"></i>
       </button>
     </div>
