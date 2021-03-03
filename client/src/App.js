@@ -9,7 +9,6 @@ function App() {
   return (
     <div className="App">
       <Navbar showNav={showNav} setShowNav={setShowNav}></Navbar>
-
       <Main showNav={showNav}></Main>
     </div>
   );

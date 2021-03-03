@@ -11,6 +11,8 @@ body {
   padding: 0;
 }
 
+/* Nav-bar */
+
 .navbar {
   display: flex;
   background-color: green;
@@ -21,13 +23,10 @@ body {
 
 .logo {
   margin-right: 1rem;
-}
-
-.logo a {
-  text-decoration: none;
   color: #fff;
   font-size: 1.5rem;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .navbar-content {
@@ -48,10 +47,6 @@ body {
 .nav-item {
   padding: 0.5rem 1rem;
   cursor: pointer;
-}
-
-.nav-item a {
-  text-decoration: none;
   color: #fff;
 }
 
@@ -68,11 +63,38 @@ body {
   cursor: pointer;
 }
 
-/*font size */
+/* main */
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+.greeter {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.greeter h1,
+p {
+  margin: 0;
+}
 
 .font-sizer-container {
+  position: absolute;
+  top: 10%;
   margin: 20px;
   width: 100%;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,9 +111,98 @@ body {
   z-index: 10;
 }
 
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  max-width: 500px;
+  max-height: 500px;
+  /* width: 70%; */
+  margin-top: 40px;
+  overflow: hidden;
+  margin: 20px;
+}
+
+/* Login */
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+
+.modal {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+
+.modal-header {
+  background-color: green;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header h3 {
+  margin: 0;
+}
+
+.modal-form {
+  padding: 20px;
+}
+
+.modal-form div {
+  margin: 15px 0;
+}
+
+.modal-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-form .form-input {
+  padding: 8px;
+  width: 100%;
+}
+
+.close-btn {
+  background: transparent;
+  font-size: 20px;
+  top: 0;
+  right: 0;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.submit-btn {
+  margin-top: 24px;
+  width: 40%;
+  background-color: green;
+  color: #fff;
+  border: 0;
+  border-radius: 3px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
 @media (max-width: 756px) {
   .menu-icon {
     display: flex;
+    background-color: green;
   }
 
   .menu-icon:hover {
@@ -126,5 +237,9 @@ body {
   .nav-item:hover {
     background-color: rgba(0, 0, 0, 0.5);
     color: black;
+  }
+
+  .chart-container {
+    width: 100%;
   }
 }

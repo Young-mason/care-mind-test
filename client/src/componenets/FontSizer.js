@@ -1,6 +1,7 @@
 import React from "react";
 
 function FontSizer({ fontSize, setFontSize }) {
+  /* 클릭한 버튼 아이디 값에 따라 main 태그 전체 폰트가 증감*/
   const fontSizeHandler = (e) => {
     if (e.target.id === "plus") {
       setFontSize((fontSize += 1));

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import GoogleChart from "../componenets/GoogleChart";
 import FontSizer from "../componenets/FontSizer";
 import Greeter from "../componenets/Greeter";
@@ -15,9 +15,7 @@ function Main({ showNav }) {
       }}
     >
       <FontSizer fontSize={fontSize} setFontSize={setFontSize}></FontSizer>
-
       <Greeter user="Master"></Greeter>
-      <p>1-1, 1-2, 2-1 문항을 이 페이지에 구현하였습니다</p>
       <GoogleChart></GoogleChart>
     </main>
   );
