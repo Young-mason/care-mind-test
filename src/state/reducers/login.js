@@ -2,31 +2,24 @@ import { actionType } from "../actions";
 
 /* 초기 상태 선언 */
 
-const isLogin = {
-  isLogin: false,
+const initialState = {
+  user: {
+    userinfo: null,
+    isLogin: null,
+  },
 };
 
 /* 리듀서 */
 
-export function accessTokenReducer(state = {}, action) {
+export function loginReducer(state = initialState, action) {
   switch (action.type) {
-    case actionType.SET_ACCESSTOKEN:
+    case actionType.SET_USER:
       return {
         ...state,
-        token: action.token,
+        user: action.user,
       };
-    default:
-      return state;
-  }
-}
-
-export function isLoginReducer(state = isLogin, action) {
-  switch (action.type) {
-    case actionType.SET_LOGIN:
-      return {
-        ...state,
-        isLogin: action.isLogin,
-      };
+    case actionType.SET_LOGOUT:
+      return initialState;
     default:
       return state;
   }

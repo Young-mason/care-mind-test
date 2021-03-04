@@ -4,16 +4,22 @@ import axios from "axios";
 function Login() {
   const [loginData, setLoginData] = useState({});
 
-  /* 로그인 요청 */
+  /* 로그인 요청 ( jwt 토큰 받아온 후 새로고침 ) */
   const loginRequestHandler = (e) => {
     e.preventDefault();
+    axios
+      .post("http://localhost:5000/getToken", loginData)
+      .then((res) => {
+        const token = res.data.token;
+        localStorage.setItem("token", token);
+      })
+      .then(() => window.location.reload());
 
-    axios.post("http://localhost:5000/signin", loginData).then(console.log);
-    // !! 토큰을 받아서 로컬 스토리지에 저장
+    // 이후 로그인은 actions.js 에서 진행됩니다
   };
 
   return (
-    <form className="modal-form">
+    <form className="modal-form" onSubmit={loginRequestHandler}>
       <div>
         <label htmlFor="id">ID</label>
         <input
@@ -38,12 +44,7 @@ function Login() {
           }
         />
       </div>
-      <input
-        type="submit"
-        value="Login"
-        className="submit-btn"
-        onClick={loginRequestHandler}
-      />
+      <input type="submit" value="Login" className="submit-btn" />
     </form>
   );
 }

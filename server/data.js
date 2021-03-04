@@ -1,15 +1,19 @@
 const userData = [
   {
+    id: 1,
     userId: "test",
     password: "1234",
     username: "테스트 유저",
-    avatar: null,
+    avatar:
+      "https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697",
   },
   {
+    id: 2,
     userId: "mason",
     password: "1234",
     username: "조영권",
-    avatar: null,
+    avatar:
+      "https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697",
   },
 ];
 

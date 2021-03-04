@@ -1,11 +1,8 @@
 import { combineReducers } from "redux";
-import { accessTokenReducer, isLoginReducer } from "./login";
-import { userInfoReducer } from "./userinfo";
+import { loginReducer } from "./login";
 
 const reducers = combineReducers({
-  accessTokenReducer,
-  isLoginReducer,
-  userInfoReducer,
+  loginReducer,
 });
 
 export default reducers;
