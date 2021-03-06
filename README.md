@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+## intro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+편의를 위해 모든 과제를 한 프로젝트 위에서 진행하였습니다
 
-## Available Scripts
+실행방법 : 
+```client: npm run start```
+```server: npm run server```
 
-In the project directory, you can run:
 
-### `yarn start`
+## 1-1 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+반응형 구현 : width 756px 에서 
+전환됩니다
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+파일 : app.css
 
-### `yarn test`
+## 1-2
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+메인 상단 
+버튼으로 폰트 크기를 
+조절할 수 있습니다
 
-### `yarn build`
+파일 : Fontsizer.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 2-1
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+유저 이름을 props로 받아서 메세지를 동적으로 변화시킵니다
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+파일 : Greet.js
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 2-2
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+메인 하단에 Pie chart를 구현하였습니다
+서버에 js파일로 저장된 데이터를 받아와서 처리해줍니다
+data.js파일에 데이터 부분을 수정하면 해당 데이터를 참조해서 차트가 변화합니다
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+파일 : [client] GoogleChart.js / [server] app.js, data.js
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 2-3
 
-## Learn More
+id: test, password: 1234 로 로그인하시면, 
+유저 정보를 가져와서 메인화면에 welcome message를 띄워줍니다
+jwt가 로컬스토리지에 존재하지 않을경우 로그인 버튼이 활성화되고, 존재한다면 로그아웃 버튼이 활성화됩니다
+리덕스를 구현한 파일들은 state폴더 안에 저장되어있습니다
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+파일: [client] Login.js, state폴더  / [server] app.js, data.js
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
